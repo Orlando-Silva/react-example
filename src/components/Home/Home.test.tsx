@@ -10,12 +10,16 @@ describe('Home Component tests', () => {
     expect(container).toBeDefined();
   });
 
-  test('change input and update card text', () => {
+  test('when onNewCard event is triggered, a new card is added', () => {
     const { getByTestId } = render(<Home />);
     const input = getByTestId('input');
-    const cardText = getByTestId('card-text');
-    fireEvent.change(input, { target: { value: 'batata' } });
+    const button = getByTestId('button');
 
-    expect(cardText).toHaveTextContent('batata');
+    fireEvent.change(input, { target: { value: 'batata' } });
+    fireEvent.click(button);
+
+    const card = getByTestId('card-id-0');
+
+    expect(card).toBeDefined();
   });
 });

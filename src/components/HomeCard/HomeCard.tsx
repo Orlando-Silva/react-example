@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Col, Form } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HomeCardProps } from './HomeCardProps';
