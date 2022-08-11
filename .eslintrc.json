@@ -62,6 +62,8 @@
         "react/jsx-props-no-spreading": "off",
         "react/destructuring-assignment": "off",
         "jsx-a11y/label-has-associated-control": "off",
+        "react/no-array-index-key": "off",
+        "eslint-disable-next-line array-callback-return": "off",
         "@typescript-eslint/explicit-function-return-type": [
             "error",
             {
