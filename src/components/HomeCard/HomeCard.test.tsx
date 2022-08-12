@@ -4,7 +4,7 @@ import { HomeCard } from './index';
 
 describe('Home Card Component tests', () => {
   test('renders home card title', () => {
-    const expectedTitle = 'Title';
+    const expectedTitle = 'Card Number';
 
     const { getByTestId } = render(<HomeCard text="blablabla" />);
     const cardTitle = getByTestId('card-title');
