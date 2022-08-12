@@ -7,16 +7,14 @@ import { HomeCardProps } from './HomeCardProps';
 const HomeCard: React.FunctionComponent<HomeCardProps> = ({
   text,
 }) => (
-  <Row>
-    <Card style={{ width: '18rem' }}>
-      <Card.Title data-testid="card-title">
-        Title
-      </Card.Title>
+  <Card>
+    <Card.Header data-testid="card-title">Card Number</Card.Header>
+    <Card.Body>
       <Card.Text data-testid="card-text">
         { text }
       </Card.Text>
-    </Card>
-  </Row>
+    </Card.Body>
+  </Card>
 );
 
 export default HomeCard;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  Col, Container, Row, Stack,
+} from 'react-bootstrap';
 import _ from 'lodash';
 import { HomeInput } from '../HomeInput';
 import { HomeCard } from '../HomeCard';
@@ -14,13 +15,15 @@ const Home: React.FunctionComponent = () => {
   };
 
   return (
-    <Container data-testid="container" className="justify-content-md-center">
+    <Container data-testid="container">
       <HomeInput value={curentCardValue} valueSetter={setCurentCardValue} onNewCard={onNewCard} />
-      { cards.map((card, index) => (
-        <div data-testid={`card-id-${index}`} key={_.uniqueId('card-id-')}>
-          { card }
-        </div>
-      ))}
+      <Row>
+        { cards.map((card, index) => (
+          <Col lg={2} className="mt-4" data-testid={`card-id-${index}`} key={_.uniqueId('card-id-')}>
+            { card }
+          </Col>
+        ))}
+      </Row>
     </Container>
   );
 };
